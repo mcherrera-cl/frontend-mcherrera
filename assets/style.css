@@ -1,0 +1,307 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.7rem;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+/* ===== NAV ===== */
+header a {
+  position: relative;
+
+  margin-left: 24px;
+
+  text-decoration: none;
+  color: #e2e8f0;
+
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+header a:hover {
+  color: #38bdf8;
+}
+
+header a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #38bdf8;
+
+  transition: 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* ===== MAIN ===== */
+main {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+  padding: 60px 0;
+}
+
+/* ===== HERO ===== */
+#entrena_con_nosotros {
+  text-align: center;
+
+  padding: 100px 30px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.12),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+#entrena_con_nosotros h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#entrena_con_nosotros p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+/* ===== BUTTON ===== */
+button {
+  margin-top: 30px;
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #38bdf8;
+  color: #0f172a;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+/* ===== PLANES ===== */
+#planes_disponibles {
+  margin-top: 90px;
+}
+
+#planes_disponibles h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.planes-grid {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* TARJETAS */
+.planes-grid details {
+  flex: 1;
+  min-width: 280px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.planes-grid details:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(56, 189, 248, 0.5);
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* HEADER TARJETA */
+.planes-grid summary {
+  position: relative;
+
+  list-style: none;
+  cursor: pointer;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.planes-grid summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ICONO */
+.icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(56, 189, 248, 0.15);
+
+  font-size: 1.6rem;
+}
+
+/* + */
+.planes-grid summary::after {
+  content: "+";
+
+  position: absolute;
+  right: 24px;
+
+  font-size: 1.7rem;
+  color: #38bdf8;
+
+  transition: 0.3s ease;
+}
+
+.planes-grid details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* CONTENIDO */
+.planes-grid details p {
+  padding: 0 24px 18px;
+  color: #cbd5e1;
+
+  animation: fade 0.25s ease;
+}
+
+/* ANIMACION */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 90px;
+
+  padding: 45px 8%;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p {
+  margin: 8px 0;
+  color: #cbd5e1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  header a {
+    margin: 0 10px;
+  }
+
+  #entrena_con_nosotros {
+    padding: 70px 20px;
+  }
+
+  #entrena_con_nosotros h2 {
+    font-size: 2rem;
+  }
+
+  #entrena_con_nosotros p {
+    font-size: 1rem;
+  }
+
+  .planes-grid {
+    flex-direction: column;
+  }
+}
