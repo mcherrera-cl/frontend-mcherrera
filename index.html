@@ -5,56 +5,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="contact" content="contacto@mcherrera.dev">
-  <html prefix="og: https://ogp.me/ns#">
-  <meta property="og:title" content="Marco Contreras - Curriculum Vitae">
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="@mcherrera - Programador FullStack" />
-  <meta property="og:image" content="https://mcherrera.dev/assets/img/favicons/android-chrome-512x512.png">
-  <meta property="og:url" content="https://mcherrera.dev">
-  <meta property="og:image" content="https://enidev911.github.io/curriculum/perfil.png">
-
-  </html>
-  <title>Mi grandiosa página web</title>
+  <title>SportClub</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
   <header>
-    <h1></h1>
+    <h1>SportClub</h1>
+    <a href="#inicio">Inicio</a>
+    <a href="#planes_disponibles">Planes</a>
+    <a href="#contacto">Contacto</a>
   </header>
-  <main></main>
-  <footer>
-    <section aria-labelledby="contact-title">
-      <h2 id="contact-title">Información de contacto</h2>
-
-      <address>
-        <ul>
-          <li>
-            Email:
-            <a href="mailto:contacto@mcherrera.dev">
-              contacto@mcherrera.dev
-            </a>
-          </li>
-
-          <li>
-            Portfolio:
-            <a href="https://mcherrera.dev" target="_blank" rel="noopener noreferrer">
-              mcherrera.dev
-            </a>
-          </li>
-
-          <li>
-            GitHub:
-            <a href="https://github.com/EniDev911" target="_blank" rel="noopener noreferrer">
-              github.com/mcherrera-cl
-            </a>
-          </li>
-        </ul>
-      </address>
+  <main>
+    <section id="entrena_con_nosotros">
+      <h2>Entrena con nosotros</h2>
+      <p>Bienvenido a SportClub, un espacio pensado para mejorar tu salud, entrenar con profesionales y participar en
+        diferentes clases deportivas.</p>
+      <button>Conocer planes</button>
     </section>
+    <section id="planes_disponibles">
+      <h2>Planes disponibles</h2>
 
-    <small>
-      © 2026 Marco Contreras Herrera. Todos los derechos reservados.
-    </small>
+      <div class="planes-grid">
+
+        <details>
+          <summary>
+            <span class="icon">🏋️</span>
+            <span>Plan Básico</span>
+          </summary>
+
+          <p>Acceso a clases grupales 2 veces por semana.</p>
+          <p>Precio: $15.000</p>
+        </details>
+
+        <details>
+          <summary>
+            <span class="icon">🔥</span>
+            <span>Plan Premium</span>
+          </summary>
+
+          <p>Acceso ilimitado a clases y uso de instalaciones.</p>
+          <p>Precio: $30.000</p>
+        </details>
+
+        <details>
+          <summary>
+            <span class="icon">👨‍👩‍👧</span>
+            <span>Plan Familiar</span>
+          </summary>
+
+          <p>Plan para grupos familiares con beneficios especiales.</p>
+          <p>Precio: $50.000</p>
+        </details>
+
+      </div>
+    </section>
+  </main>
+  <footer id="contacto">
+    <address>
+      <p>Correo: contacto@sportclub.cl</p>
+      <p>Teléfono: +56 9 1234 5678</p>
+      <p>Dirección: Av. Principal 123, Santiago</p>
+    </address>
   </footer>
 </body>
 
